@@ -26,7 +26,7 @@ app.use(
   cors({
     // backend url  for teesting
     // origin: "http://localhost:1552",
-    origin: "http://localhost:5173",
+     origin: "https://deploy-frontend-5uty.onrender.com",
     credentials: true,
   })
 );
