@@ -19,17 +19,15 @@ connectDB();
 
 const PORT = 1552;
 const app = express();
-
-app.use(express.json());
-app.use(cookieParser());
 app.use(
   cors({
-    // backend url  for teesting
-    // origin: "http://localhost:1552",
-     origin: "https://deploy-frontend-5uty.onrender.com",
+    origin: "https://deploy-frontend-5uty.onrender.com",
     credentials: true,
   })
 );
+app.use(express.json());
+app.use(cookieParser());
+
 app.use("/api/v1/contact", contactRoutes);
 app.use("/api/v1/media", mediaRoute);
 app.use("/api/v1/user", userRoute);
